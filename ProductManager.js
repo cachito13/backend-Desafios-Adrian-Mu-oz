@@ -1,9 +1,8 @@
-import fs from "fs";
-import express from "express";
+import fs from 'fs';
 
-const app = express();
 
-class ProductManager {
+
+export default class ProductManager {
   constructor(path) {
     this.path = path;
     this.format = "utf-8";
@@ -75,47 +74,10 @@ class ProductManager {
     }
   };
 }
+
 //ALTA, BAJA Y MODIFICACION
 
 const prod = new ProductManager("./products.json");
-
-
-
-//////////////////////////////////////////(http://http://localhost:8080/productos?limite=1....10?id=1.....10)//////////////////////////////
-const Product = express(); //ejecucion de la libreria
-Product.get("/productos", async ({ query }, response) => {
-  try {
-    const { limite, id } = query;
-    //localhost:8080/productos?id=1....10
-    if (id) {
-      console.log("Búsqueda de producto por ID:", id);
-      const products = await prod.getProduct();
-      const idProduct = products.find((item) => item.id === parseInt(id));
-      response.send(idProduct ? idProduct : "No se encontró ningún producto con el ID especificado");
-    }
-    //localhost:8080/productos?limite=1....10
-    else if (limite) {
-      console.log("OK de envío con límite:", limite);
-      const products = await prod.getProduct();
-      const limiteNumerico = parseInt(limite);
-
-      const limitedProducts = !isNaN(limiteNumerico) && limiteNumerico <= products.length
-        ? products.slice(0, limiteNumerico)
-        : "El límite es superior a la cantidad de objetos";
-
-      response.send(limitedProducts);
-    } else {
-      //(!id !limite, muestra todos los productos)
-      console.log("OK de envío de todos los productos");
-      const products = await prod.getProduct();
-      response.send(products);
-    }
-  } catch (error) {
-    response.send("Error al procesar la solicitud");
-  }
-});
-
-Product.listen(8080, () => console.log("Server Up"));
 
 
 //////////////////////////////////////////////////////////agregar un producto nuevo///////////////////////////////////////////////
@@ -124,7 +86,7 @@ Product.listen(8080, () => console.log("Server Up"));
 
 // //Mostrar todos los productos
 
-// console.log(await prod.getProduct())
+console.log(await prod.getProduct())
 
 ///////////////////////////////////////////////////////////buscar un producto por su id////////////////////////////////////////////
 
