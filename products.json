@@ -1,0 +1,82 @@
+[
+	{
+		"id": 1,
+		"title": "Campera Verano",
+		"description": "Campera de Verano delgada",
+		"price": 50000,
+		"code": 28,
+		"stock": 5
+	},
+	{
+		"id": 2,
+		"title": "riñonera",
+		"description": "riñonera de jean",
+		"price": 2000,
+		"code": 14,
+		"stock": 55
+	},
+	{
+		"id": 3,
+		"title": "remera",
+		"description": "remera manga cortas",
+		"price": 2000,
+		"code": 15,
+		"stock": 100
+	},
+	{
+		"id": 4,
+		"title": "pantalon",
+		"description": "pantalon de jean",
+		"price": 20000,
+		"code": 13,
+		"stock": 55
+	},
+	{
+		"id": 5,
+		"title": "camisa",
+		"description": "camisa de jean",
+		"price": 10000,
+		"code": 19,
+		"stock": 5
+	},
+	{
+		"id": 6,
+		"title": "pantalon corto",
+		"description": "pantalon de verano",
+		"price": 8000,
+		"code": 20,
+		"stock": 15
+	},
+	{
+		"id": 7,
+		"title": "remera manga larga",
+		"description": "remera",
+		"price": 5000,
+		"code": 22,
+		"stock": 53
+	},
+	{
+		"id": 8,
+		"title": "bufanda",
+		"description": "bufanda de hilo",
+		"price": 1000,
+		"code": 24,
+		"stock": 535
+	},
+	{
+		"id": 9,
+		"title": "medias",
+		"description": "medias cortas",
+		"price": 200,
+		"code": 54,
+		"stock": 35
+	},
+	{
+		"id": 10,
+		"title": "zapatillas",
+		"description": "zapatillas de jean",
+		"price": 22000,
+		"code": 55,
+		"stock": 345
+	}
+]
